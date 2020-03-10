@@ -3,6 +3,32 @@
 #-----------------------------------------------------------------------------#
 
 # Glitch method for databending via find-and-replace --------------------------
+
+#' Glitch using find and replace.
+#'
+#' A function for databending a raw vector by randomly sampling unique observed
+#' values \eqn{F} and replacing them with another randomly sampled unique value
+#' \eqn{R}.
+#'
+#' @param input_data A raw vector representing the file to databend.
+#' @param n_changes A numeric value. How many unique elements \emph{F} should be
+#'   selected for replacement?
+#' @param tune A numeric value between 1 and 100. What percentage of the
+#'   occurences of \eqn{F} should be replaced?
+#' @return A raw vector representing a modified version of the input vector.
+#'
+#' @examples
+#' data(demo_img1)
+#' my_glitch <- glitch_far(demo_img1, n_changes = 3, tune = 5)
+#' \dontrun{
+#' my_glitch %>%
+#'   magick::image_read() %>%
+#'   magick::image_scale(geometry_size_pixels(width = 550)) %>%
+#'   print()
+#' }
+#'
+#' @family glitch functions
+#' @export
 glitch_far <- function(input_data, n_changes = 5, tune = 100) {
   glitched <- input_data
   for (i in 1:n_changes) {

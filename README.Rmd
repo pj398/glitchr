@@ -1,0 +1,32 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+# glitchr
+
+<!-- badges: start -->
+[![CRAN status](https://www.r-pkg.org/badges/version/glitchr)](https://cran.r-project.org/package=glitchr)
+<!-- badges: end -->
+
+The goal of glitchr is to ...
+
+## Installation
+
+You can install the development version of glitchr from Github with:
+
+```r
+# install.packages("devtools")
+devtools::install_github("pj398/glitchr")
+```
+
+WIP
