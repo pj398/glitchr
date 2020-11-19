@@ -10,7 +10,7 @@ status](https://www.r-pkg.org/badges/version/glitchr)](https://cran.r-project.or
 <!-- badges: end -->
 
 glitchr is a toy package for databending and creating glitch art in R.
-To read more about the idea behind it, read [this blog
+To read more about the idea behind it, take a look at [this blog
 post](https://www.petejon.es/posts/2020-03-09-glitch-art-in-r/).
 
 – WORK IN PROGRESS –
@@ -30,8 +30,8 @@ First, you need to read an image (currently only PNG images are
 confirmed to work) as a raw vector in R.
 
 If you have a PNG image on file, you can read this in as raw using
-`readr::read_file_raw("path/to_file")`. Alternatively, use the demo
-images:
+`readr::read_file_raw("path/to_file")`. Alternatively, use one of the
+demo images included in the package:
 
 ``` r
 library(glitchr)
@@ -41,7 +41,8 @@ library(glitchr)
 data("demo_img1")
 ```
 
-This is the raw vector for the following image:
+This is the raw vector for [the following
+image](https://unsplash.com/photos/yQILyG_fGuE):
 
 ![](man/figures/demo_img1_550.png)
 
@@ -69,20 +70,21 @@ the raw vector and then performs chance operations (either adding,
 moving, cloning or deleting values) at each change point.
 
 For each method, we can use the `n_changes` argument to specify how many
-changes to make. The find and replace method (which is the default
-because it is more stable) can be fine-tuned using `tune` by specifying
-what percentage of the found values should be replaced. The chance
-operations method can be fine-tuned by using the `noise` argument to set
-a ceiling for how much data is modified at each operation.
+changes to make. The find-and-replace method can be fine-tuned using
+`tune` by specifying what percentage of the found values should be
+replaced. The chance operations method can be fine-tuned by using the
+`noise` argument to set a ceiling for how much data is modified at each
+operation.
+
+Although the `"chops"` method is more fun in terms of what’s happening
+under the hood, it is a little unstable so the safest method to use is
+generally `"far"`.
 
 Here’s an example:
 
 ``` r
 my_glitch <- glitch_png(demo_img1, method = "far", n_changes = 3, tune = 5)
 ```
-
-Although the `"chops"` method is more fun, it is a little unstable so
-the safest method to use is generally `"far"`.
 
 We can take a look at what we just did using `glitchr::plot_vector`
 which uses the excellent
