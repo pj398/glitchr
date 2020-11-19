@@ -1,12 +1,14 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# glitchr
+# glitchr <img src="man/figures/README-logo.png" align="right" height="120"/>
 
 <!-- badges: start -->
 
 [![CRAN
 status](https://www.r-pkg.org/badges/version/glitchr)](https://cran.r-project.org/package=glitchr)
+[![repo
+size](https://img.shields.io/github/repo-size/pj398/glitchr)](https://github.com/pj398/glitchr)
 <!-- badges: end -->
 
 glitchr is a toy package for databending and creating glitch art in R.

@@ -12,10 +12,11 @@ knitr::opts_chunk$set(
   out.width = "100%"
 )
 ```
-# glitchr
+# glitchr <img src="man/figures/README-logo.png" align="right" height="120"/>
 
 <!-- badges: start -->
 [![CRAN status](https://www.r-pkg.org/badges/version/glitchr)](https://cran.r-project.org/package=glitchr)
+[![repo size](https://img.shields.io/github/repo-size/pj398/glitchr)](https://github.com/pj398/glitchr)
 <!-- badges: end -->
 
 glitchr is a toy package for databending and creating glitch art in R. To read more about the idea behind it, take a look at [this blog post](https://www.petejon.es/posts/2020-03-09-glitch-art-in-r/).
