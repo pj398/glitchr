@@ -2,7 +2,7 @@ Package: glitchr
 Type: Package
 Title: A package for databending and making glitch art in R
 Version: 0.0.2.9001
-Authors@R: person("Pete", "Jones", email = "petejones398@gmail.com", 
+Authors@R: person("Pete", "Jones", email = "pete@petejon.es", 
     role=c("aut", "cre"))
 URL: https://github.com/pj398/glitchr
 BugReports: https://github.com/pj398/glitchr/issues
